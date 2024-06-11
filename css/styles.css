@@ -9,10 +9,10 @@
     --green: #4CA154;
     --vivid_blue: #2A4DD0;
 
-    --small_text: 0.875rem;
-    --button_text: 1rem;
     --body_text: 1.125rem;
-    --heading: 3.75rem;
+    --button_text: 1rem;
+    --small_text: 0.875rem;
+    --heading_text: 3.75rem;
   }
 
 /* Reset some default styles */
@@ -22,8 +22,16 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
     color: var(--dull_navy);
 }
 
-h2{
-    max-width: 150px;
+
+
+
+h1{
+    max-width: 350px;
+    font-size: var(--heading_text);
+}
+
+h6{
+    font-size: var(--small_text);
 }
 
 a {
@@ -31,9 +39,15 @@ a {
     color: inherit;
 }
 
+p{
+    font-size: var(--body_text);
+}
+
 * {
     box-sizing: border-box;
 }
+
+
 
 /* Add some styles for body*/
 body {
@@ -46,6 +60,7 @@ body {
     line-height: 1.5;
     overflow-x: hidden;
     /* padding: 4rem; */
+    padding-bottom: 6rem;
 
 }
 
@@ -94,8 +109,8 @@ main {
 }
 
 .logo {
-    width: 55%;
-    max-width: 85px;
+    width: 65%;
+    max-width: 135px;
     margin-left: 5%;
 }
 
@@ -141,8 +156,6 @@ svg{
 }
 
 .icon-container{
-    display: flex;
-    align-items: center;
     max-width: 10%;
     margin-left: auto;
     margin-right: 5%;
@@ -155,6 +168,56 @@ svg{
 .main-img{
     width: 100%;
     height: auto;
+    max-width: 520px;
+}
+
+.button-blue{
+    background-color: var(--vivid_blue);
+    padding:16px 32px;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: var(--button_text);
+}
+
+.link{
+    color: var(--vivid_blue);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    font-size: var(--button_text);
+}
+
+.main-cta{
+    margin-top:25px;
+}
+.buttons{
+    margin-top:35px;
+}
+
+.buttons .button-blue{
+    margin-right: 35px;
+}
+
+.checkmark-container{
+    display: flex;
+}
+
+.checkmark-card{
+    display: flex;
+    margin-top:35px;
+}
+
+.card1{
+    margin-right: 25px;
+}
+
+.checkmark-icon{
+    margin-right: 10px;
+}
+
+.checkmark-card p {
+    font-size: var(--small_text);
 }
 
 @media screen and (max-width:320px){
