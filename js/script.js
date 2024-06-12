@@ -1,9 +1,11 @@
 // Add some interactivity to the website
 console.log("Hello, world!");
+
 let element = document.getElementById("checkbox");
-
-
-
+let closeBtn = document.getElementById("close-icon");
+let menu = document.getElementById("menu-icon");
+var mobileNav = document.getElementById("mobile-nav");
+var switchBtn = document.getElementById("switch");
 
 
 element.addEventListener("change", function(){
@@ -24,4 +26,19 @@ element.addEventListener("change", function(){
 
       }
 });
+
+menu.addEventListener("click", function(){
+  mobileNav.style.display = "block";
+  mobileNav.style.right = "0";
+  switchBtn.style.right = "150px";
+})
+
+closeBtn.addEventListener("click", function(){
+  
+  mobileNav.style.right = "-702px";
+  switchBtn.style.right = "-150px";
+  setTimeout('mobileNav.style.display = "none"', 50);
+
+});
+
 
