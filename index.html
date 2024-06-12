@@ -10,9 +10,26 @@
 <body>
     <header>
         <div class="header-wrapper">
-            <img class="logo" src="images/alarado-icon-homepage.svg" alt="company logo">
+            <img id="logo" class="logo" src="images/alarado-icon-homepage.svg" alt="company logo">
             <div class="icon-container show-mobile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path id="menu" fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></svg>
+            </div>
+            <div class="nav-container show-desktop">
+                <ul class="nav-list">
+                    <li><small><a href="#">About us</a></small></li>
+                    <li><small><a href="#">Product</a></small></li>
+                    <li><small><a href="#">Resource</a></small></li>
+                    <li><small><a href="#">Contact</a></small></li>
+                </ul>
+            </div>
+            <div class="switch-container">
+                <label class="switch">
+                    <input id="checkbox" type="checkbox" checked="true">
+                    <span class="slider round" ></span>
+                    <img class="switch-img moon-fill" src="images/Moon_fill_light.svg" alt="Moon icon">
+                    <img class="switch-img sun-fill" src="images/Sun_fill.svg" alt="Sun icon">
+
+                  </label>
             </div>
         </div>
     </header>
@@ -20,24 +37,26 @@
     <main>
         <div class="main-wrapper">
             <img class="main-img" src="images/hero-image-simple-homepage.png" alt="Cartoon human with robot head scrolling through reviews on his laptop">
-            <div class="main-title">
-                <h6>&#128526; SIMPLE WAY TO COMMUNICATE</small></h6>
-                <h1>Actions for Accessibility in Design</h1>
-            </div>
-            <div class="main-cta">
-                <p>The fastest way to build and deploy websites with resusable components.</p>
-                <div class="buttons">
-                    <a class="button-blue" href="#">GET STARTED</a>
-                    <a class="link" href="#">Get live demo</a>
+            <div class="main-content">
+                <div class="main-title">
+                    <h6><small>&#128526; SIMPLE WAY TO COMMUNICATE</small></h6>
+                    <h1>Actions for Accessibility in Design</h1>
                 </div>
-                <div class="checkmark-container">
-                    <div class="checkmark-card card1">
-                        <img class="checkmark-icon" src="images/Done_ring_round_fill.svg" alt="Green round circle with green checkmark">
-                        <p>No credit card required</p>
+                <div class="main-cta">
+                    <p>The fastest way to build and deploy websites with resusable components.</p>
+                    <div class="buttons">
+                        <a class="button-blue" href="#">GET STARTED</a>
+                        <a class="link" href="#">Get live demo</a>
                     </div>
-                    <div class="checkmark-card card2">
-                        <img class="checkmark-icon" src="images/Done_ring_round_fill.svg" alt="Green round circle with green checkmark">
-                        <p>No software to install</p>
+                    <div class="checkmark-container">
+                        <div class="checkmark-card card1">
+                            <img class="checkmark-icon" src="images/Done_ring_round_fill.svg" alt="Green round circle with green checkmark">
+                            <p>No credit card required</p>
+                        </div>
+                        <div class="checkmark-card card2">
+                            <img class="checkmark-icon" src="images/Done_ring_round_fill.svg" alt="Green round circle with green checkmark">
+                            <p>No software to install</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,4 +65,5 @@
 
     <script src="script.js"></script>
 </body>
+<script src="js/script.js"></script>
 </html>

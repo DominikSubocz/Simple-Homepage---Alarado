@@ -15,18 +15,25 @@
     --heading_text: 3.75rem;
   }
 
+  [data-theme="dark"] {
+    --dull_blue: #111729;
+    --white: #ffffff; 
+    --gray: #909193;
+    --dull_navy: #ffffff;
+    --dark_purple: #111729;
+    --green: #4CA154;
+    --vivid_blue: #2A4DD0;
+  }
+  
+
 /* Reset some default styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
+body, h1, h2, h3, h4, h5, h6{
     margin: 0;
     padding: 0;
     color: var(--dull_navy);
 }
 
-
-
-
 h1{
-    max-width: 350px;
     font-size: var(--heading_text);
 }
 
@@ -41,6 +48,7 @@ a {
 
 p{
     font-size: var(--body_text);
+    color: var(--gray);
 }
 
 * {
@@ -220,8 +228,197 @@ svg{
     font-size: var(--small_text);
 }
 
+.nav-container{
+    margin: 0 auto;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap:48px;
+    font-size: var(--button_text);
+    font-weight: 700;
+}
+
+.nav-list li:nth-child(n+2){
+    color: var(--gray);
+}
+
+
+
+.switch-container{
+    margin-right: 82px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 0px;
+    bottom:1px;
+    background-color: var(--white);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--dark_purple);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px --dark_purple;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(22.5px);
+    -ms-transform: translateX(22.5px);
+    transform: translateX(22.5px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .switch-img{
+    position: absolute;
+    z-index: 99;
+    width: 15px;
+    height: auto;
+  }
+
+  .moon-fill{
+    top:3.5px;
+    right: 25px;
+  }
+
+  .sun-fill{
+    top:3.5px;
+    right: 2px;
+  }
+  
+
+
 @media screen and (max-width:320px){
 
+}
+
+@media screen and (min-width:320px){
+
+    h1{
+        max-width: 350px;
+    }
+
+    .show-desktop{
+        display: none;
+    }
+
+    .show-mobile{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+
+    h1{
+        max-width: 750px;
+
+    }
+
+    .main-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .show-mobile{
+        display: none;
+    }
+
+    .show-desktop{
+        display: block;
+    }
+}
+
+@media screen and (min-width:1280px){
+
+    h1{
+        max-width: 350px;
+    }
+
+    p{
+        max-width: 450px;
+    }
+
+    body{
+        max-width: 100%;
+    }
+
+    main{
+        margin-top:100px;
+    }
+
+    .main-img{
+        width: 515px;
+        height: auto;
+        max-width: none;
+    }
+
+    .checkmark-card{
+        width: 215px;
+    }
+
+    .main-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .main-content{
+        position: relative;
+        margin-right: auto;
+        right: 100px;
+    }
+
+    .checkmark-container{
+        margin-top:25px;
+    }
 
 }
 
