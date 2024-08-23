@@ -5,6 +5,10 @@ html, body{
     overflow-x: hidden;
 }
 
+body{
+    overflow-y: hidden;
+}
+
 :root {
     --dull_blue: #F2F9FE;
     --white: #ffffff; 
@@ -48,6 +52,7 @@ h1{
 
 h6{
     font-size: var(--small_text);
+    letter-spacing: 1.75px;
 }
 
 a {
@@ -141,8 +146,6 @@ svg{
     height: 100%;
 }
 
-
-
 .header-wrapper{
     display: flex;
     padding:10px 0;
@@ -174,7 +177,6 @@ svg{
     background-color: var(--vivid_blue);
     padding:16px 32px;
     border-radius: 10px;
-    color: var(--white);
     font-size: var(--button_text);
 }
 

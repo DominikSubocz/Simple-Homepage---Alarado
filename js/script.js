@@ -41,4 +41,11 @@ closeBtn.addEventListener("click", function(){
 
 });
 
+window.onresize = function() {
+        if ((window.innerWidth > 1023) && (mobileNav.style.display == "block")) {
+          mobileNav.style.right = "-702px";
+          switchBtn.style.right = "-150px";
+          setTimeout('mobileNav.style.display = "none"', 50);
+        }
+};
 
